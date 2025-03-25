@@ -19,7 +19,10 @@
       "vite/client"
     ],
     "jsx": "preserve",
-    "jsxImportSource": "vue"
+    "jsxImportSource": "vue",
+    "paths": {
+      "@locales/*": ["./locales/*"],
+    }
   },
   "exclude": [
     "dist"

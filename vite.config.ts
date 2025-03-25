@@ -1,3 +1,4 @@
+import path from "path";
 import md from "unplugin-vue-markdown/vite";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
@@ -11,6 +12,12 @@ export default defineConfig({
     }),
     md({}),
   ],
+  resolve: {
+    alias: {
+      include: path.resolve(__dirname, "locales/**"),
+      "@locales": path.join(__dirname, "locales"),
+    },
+  },
   build: {
     target: "es2022",
   },
